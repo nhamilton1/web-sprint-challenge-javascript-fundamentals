@@ -61,9 +61,17 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(data){
+    const displayNames = [];
+    data.forEach(function(item){
+      displayNames.push(item.animal_name);
+      displayNames.push(item.scientific_name);
+      // console.log(item)
+    });
+    return displayNames
   }
+
+ console.log(animalNames(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -72,8 +80,11 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(data){
+    const lowerCase = data.map(function(item){
+      return item.animal_name.toLowerCase();
+    });
+    return lowerCase
   }
   
   
@@ -82,8 +93,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(data){
+    const lowPop = data.filter(function(item){
+      return item.population < 5
+    });
+    return lowPop
   }
   
 
