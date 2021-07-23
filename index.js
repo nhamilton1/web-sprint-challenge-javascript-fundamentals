@@ -202,8 +202,8 @@ function CuboidMaker(attr){
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume(4,5,5)); // 100
+console.log(cuboid.surfaceArea(4,5,5)); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -214,11 +214,11 @@ class CuboidMakerTwo {
     this.width = attribute.width;
     this.height = attribute.height;
   }
-  volume(length, width, height){
+  volume(){
     const cuboidVolume = this.length * this.width * this.height
     return cuboidVolume 
   }
-  surfaceArea(length, width, height){
+  surfaceArea(){
     const cuboidSurfaceArea = 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
     return cuboidSurfaceArea
   }
@@ -237,8 +237,8 @@ class CuboidMakerTwo {
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+// console.log(cuboidTwo.volume(4,5,5)); // 100
+// console.log(cuboidTwo.surfaceArea(4,5,5)); // 130
 
 
 
