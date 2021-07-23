@@ -208,11 +208,12 @@ console.log(cuboid.surfaceArea(4,5,5)); // 130
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo {
+class CuboidMakerTwo extends CuboidMaker{
   constructor(attribute){
-    this.length = attribute.length;
-    this.width = attribute.width;
-    this.height = attribute.height;
+    super(attribute)
+    // this.length = attribute.length;
+    // this.width = attribute.width;
+    // this.height = attribute.height;
   }
   volume(){
     const cuboidVolume = this.length * this.width * this.height
@@ -226,6 +227,12 @@ class CuboidMakerTwo {
 
  }
 
+ const cuboidTwo = new CuboidMakerTwo({
+  length: 4,
+  width: 5,
+  height: 5,
+});
+
 
 // this also worked, but its not what is asked of us. 
 // class CuboidMakerTwo extends CuboidMaker{
@@ -237,8 +244,8 @@ class CuboidMakerTwo {
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume(4,5,5)); // 100
-// console.log(cuboidTwo.surfaceArea(4,5,5)); // 130
+console.log('test', cuboidTwo.volume(4,5,5)); // 100
+console.log(cuboidTwo.surfaceArea(4,5,5)); // 130
 
 
 
