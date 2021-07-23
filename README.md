@@ -26,6 +26,16 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+    1.a .map()- Gives you a brand new array that does not change/ manipulate the original. .map() Also, needs the return keyword. .map() is used for for converting data.  
+
+    1.b. .reduce() - this will give us back a single value. It takes two arguments, the accumulator (the running total) and it takes 'item' which is the current value.
+    will also need the inital value, which tells where to start the equation. When multiplying, its usually 1 and if you are adding its usually 0. A good use case for this
+    would be when you are trying to get sums and/or products. 
+
+    1.c. .filter() - filter, just like .map, returns a new array and requires a return statement. But, unlike map, it filters the results into the new array based
+    on something that can be TRUE or FALSE, if its true, its included, if its false, its excluded. A good use case is if you wanted to only filter out a certain year
+    then it will only show items in the array that are for the year you set it to be. 
+
 2. Explain the difference between a callback and a higher order function.
 
 3. Explain what a closure is.
