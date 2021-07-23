@@ -38,11 +38,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. Explain the difference between a callback and a higher order function.
 
+    Callback functions are passed in to the higher order function as an argument, while the higher order function recieves a callback
+    function as an argument. 
+
 3. Explain what a closure is.
+
+    A closure is when a function goes outside of it's scope to grab a value that was defined in the parent scope.
 
 4. Describe the four principles of the 'this' keyword.
 
+    4.a. Window binding - this is when the function is contained in the global scope, the value of 'this' inside of said function will defualt to the windowm,
+    you dont want this to happen. If you are in 'strict mode' it will return undefined, rather returning the window
+
+    4.b. Implicit binding - this is when you invoke a function, you look to the left of the dot, and that is what 'this' refers to 
+
+    4.c. Explicit binding - this is telling JavaScript exactly what 'this' will be using .call, .apply or .bind. Call will immediately invoke the function and
+    pass in your arguments 1 by 1. .apply will immediately invoke the funmction and pass in your arguments as an array. .bind will pass in your arguments 
+    1 by 1, but it does not immediately invoke the function, it will actually return a brand new function that can be invoked later.
+
+    4.d. New binding - when the function is invoked with the new keyword, the 'this' keyword, inside said function, is bound to the new object being constructed.
+    when the function is invoked as a constructor function, 'this' points to the newly created object. 
+
 5. Why do we need super() in an extended class?
+
+    We need super() in an exteneded class because it is referring to the parent class. It's used to call the constructor of the parent class. Also,
+    its use to access the parent's properties and methods. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
