@@ -234,18 +234,11 @@ class CuboidMakerTwo extends CuboidMaker{
 });
 
 
-// this also worked, but its not what is asked of us. 
-// class CuboidMakerTwo extends CuboidMaker{
-//  constructor(attributes){
-//   super(attributes);
-// }
-// }
-
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-console.log('test', cuboidTwo.volume(4,5,5)); // 100
-console.log(cuboidTwo.surfaceArea(4,5,5)); // 130
+console.log('test4', cuboidTwo.volume(4,5,5)); // 100
+console.log('test4', cuboidTwo.surfaceArea(4,5,5)); // 130
 
 
 
