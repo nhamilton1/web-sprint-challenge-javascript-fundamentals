@@ -192,7 +192,11 @@ function CuboidMaker(attr){
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
-  const cuboid = new CuboidMaker(4, 5, 5);
+  const cuboid = new CuboidMaker({
+    length: 4,
+    width: 5,
+    height: 5,
+  });
 
 
 
@@ -210,11 +214,11 @@ class CuboidMakerTwo {
     this.width = attribute.width;
     this.height = attribute.height;
   }
-  volume(){
+  volume(length, width, height){
     const cuboidVolume = this.length * this.width * this.height
     return cuboidVolume 
   }
-  surfaceArea(){
+  surfaceArea(length, width, height){
     const cuboidSurfaceArea = 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
     return cuboidSurfaceArea
   }
@@ -251,12 +255,20 @@ class CubeMaker extends CuboidMaker{
     const cubeVolume = Math.pow(sideLength, 3)
     return cubeVolume
   }
-  CubeSurfaceArea(sideLength){
+  cubeSurfaceArea(sideLength){
     const cubeArea = 6 * Math.pow(sideLength, 2)
     return cubeArea
   }
 }
 
+const cube = new CubeMaker({
+  length: 4,
+  width: 5,
+  height: 5,
+});
+
+console.log(cube.volume(4))
+console.log(cube.cubeSurfaceArea(4))
 
 
 
