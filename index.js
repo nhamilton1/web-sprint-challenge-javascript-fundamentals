@@ -63,16 +63,14 @@ const zooAnimals = [
 
   function animalNames(data){
     const displayNames = [];
-    data.forEach(function(item){
-      displayNames.push(item.animal_name);
-      displayNames.push(item.scientific_name);
-      // console.log(item)
-    });
+    data.forEach(item => displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`));
     return displayNames
   }
 
- console.log(animalNames(zooAnimals));
   
+ console.log(animalNames(zooAnimals));
+ // displayNames.push(item.scientific_name);
+ // console.log(item)
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -225,11 +223,13 @@ class CuboidMakerTwo {
  }
 
 
-
-
+// this also worked, but its not what is asked of us. 
+// class CuboidMakerTwo extends CuboidMaker{
 //  constructor(attributes){
 //   super(attributes);
 // }
+// }
+
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
@@ -242,7 +242,20 @@ class CuboidMakerTwo {
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
+class CubeMaker extends CuboidMaker{
+  constructor(attribute){
+    super(attribute);
 
+  }
+  volume(sideLength){
+    const cubeVolume = Math.pow(sideLength, 3)
+    return cubeVolume
+  }
+  CubeSurfaceArea(sideLength){
+    const cubeArea = 6 * Math.pow(sideLength, 2)
+    return cubeArea
+  }
+}
 
 
 
